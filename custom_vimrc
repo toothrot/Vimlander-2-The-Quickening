@@ -1,0 +1,9 @@
+colorscheme desert
+
+let ruby_operators = 0
+
+set nogdefault
+
+if $SHELL =~ 'bin/fish'
+  set shell=/bin/bash
+endif
