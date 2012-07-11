@@ -1,4 +1,5 @@
 colorscheme desert
+" colorscheme github
 
 let ruby_operators = 0
 
@@ -7,3 +8,14 @@ set nogdefault
 if $SHELL =~ 'bin/fish'
   set shell=/bin/bash
 endif
+
+autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+
+set tabstop=2
+set expandtab
+set wrap
+
+map <leader>F :Ack<Space><cword>
